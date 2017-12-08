@@ -1,14 +1,11 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-
-// import React from 'react';
-// import ReactDOM from 'react-dom';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 class Contact extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      password: 'swordfish',
+      password: 'password',
       authorized: false
     };
     this.authorize = this.authorize.bind(this);
