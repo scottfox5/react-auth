@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-class Contact extends React.Component {
+class HelloWorld extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -27,26 +27,23 @@ class Contact extends React.Component {
         <input type='submit' />
       </form>
     );
-    const contactInfo = (
-    	<ul>
-          <li>
-            client@example.com
-          </li>
-          <li>
-            555.555.5555
-          </li>
-      </ul>
+    var helloWorld = (
+    	<div>
+        <p>
+          React is neat!
+        </p>
+      </div>
     );
     return (
       <div id="authorization">
-        <h1>{this.state.authorized ? 'Contact' : 'Enter the Password'}</h1>
-        {this.state.authorized ? contactInfo : login}
+        <h1>{this.state.authorized ? 'Hello World.' : 'Enter the Password'}</h1>
+        {this.state.authorized ? helloWorld : login}
       </div>
     );
   }
 }
 
 ReactDOM.render(
-  <Contact />,
+  <HelloWorld />,
   document.getElementById('app')
 );
